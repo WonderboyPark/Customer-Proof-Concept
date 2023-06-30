@@ -1,0 +1,36 @@
+.navbar {
+	/*height: 100px;*/
+}
+
+.customer_logo {
+	height: 65px;
+}
+
+.customer_title {
+	font-size: 26px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+a {
+	color: #000;
+}
+
+.card-img-top {
+	height: 15vw;
+	object-fit: scale-down;
+	padding-top: 10px;
+}
+
+.item-pdf-link {
+	text-align: center;
+}
+
+.sign_in {
+    color: white;
+    font-size: 13px;
+}
+
+.text-bold {
+	font-weight: bold;
+}

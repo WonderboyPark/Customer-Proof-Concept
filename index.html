@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link href="./bootstrap.min.css" rel="stylesheet">
+        <link href="./bootstrap-icons.css" rel="stylesheet">
+        <link href="./dixie.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    </head>
+    <body>
+    	<script src="./jquery-3.5.1.js"></script>
+    	<script src="./item_data.js"></script>
+    	<script src="./cust_data.js"></script>
+		<script src="./item_search.js"></script>
+        
+        <nav class="navbar sticky-top navbar-dark bg-dark">
+		  <div class="container-fluid">
+		    <a class="navbar-brand">
+		    	<img src="./eneos-logomark-2019.jpg" alt="" class="customer_logo d-inline-block align-text-top">
+		    	<span class="customer_title">Eneos USA Inc.</span>
+
+		    </a>
+		    
+		    <form class="d-flex">
+		    	<input class="form-control me-2" placeholder="Search for Item" id="search" name="search" type="text" data-toggle="hideseek" data-list=".item_card">
+
+		    </form>
+		  </div>
+			  <div class="container-fluid">
+			  	<div class="col">
+			  		<p style="color:white; margin: 0px;">User: Jane Doe Smith</p> <a class="sign_in" href="./sign_in.html">Log Out</a>
+				<p style="color:white; margin: 0px;">Items Found: 1234</p>
+			  	</div>
+			</div>
+		</nav>
+
+		<div class="album py-5 bg-light">
+			
+		    <div class="container-fluid">
+
+		      <div id="item_gallery" class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+		       
+
+		      </div>
+		    </div>
+		  </div>
+		<script src="./zoom.min.js"></script>
+		<script src="./hideseek.min.js"></script>
+		<script src="./bootstrap.bundle.min.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				$('[data-toggle="popover"]').popover()
+
+				$('img').wrap('<span style="display:inline-block"></span>').css('display', 'block').parent().zoom();
+
+				var search_item_text = $('#search').val()
+			    $('#search').hideseek({
+				      list:           '.item_card',
+				      nodata:         'Could not find that item',
+				      attribute:      'text',
+				      matches:        false,
+				      highlight:      false,
+				      ignore:         '',
+				      navigation:     false,
+				      ignore_accents: false,
+				      hidden_mode:    false,
+				      min_chars:      1
+				});
+
+			});
+
+			
+		</script>
+        
+    </body>
+</html>

@@ -1,0 +1,19 @@
+
+<html>
+<body>
+    <div id='fileNames'></div>
+</body>
+        <script src="./jquery-3.5.1.js"></script>
+        <!-- <script src="./item_data.js"></script> -->
+        <script src="./cust_data.js"></script>
+        <script src="./item_search.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () 
+    {
+        $.get(".", function(data) 
+        {
+            $("#fileNames").append(data);
+        });
+    })
+</script>
